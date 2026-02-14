@@ -1,0 +1,30 @@
+.logo-slider {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;   /* reduced top-bottom space */
+  background: transparent;
+}
+
+.logo-track {
+  display: flex;
+  align-items: center;
+  gap: 35px;   /* reduced spacing between images */
+  animation: scroll 25s linear infinite;
+}
+
+.logo-img {
+  height: 130px;   /* 🔥 increased image size */
+  width: auto;
+  object-fit: cover;
+  transition: 0.3s ease;
+}
+
+/* Infinite scroll */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

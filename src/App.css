@@ -1,0 +1,287 @@
+/* =========================
+   GLOBAL THEME VARIABLES
+   ========================= */
+:root {
+  --brand-purple: #8e0d58;
+  --brand-black: #121212;
+  --brand-white: #ffffff;
+}
+
+/* RESET FEEL */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--brand-white);
+  color: var(--brand-black);
+  font-family: Inter, system-ui, sans-serif;
+}
+
+/* =========================
+   CONTACT SECTION
+   ========================= */
+.contact-section {
+  background: var(--brand-white);
+  padding: 80px 20px;
+  color: var(--brand-black);
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* HEADER */
+.contact-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact-header h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: var(--brand-black);
+}
+
+.contact-header h1 span {
+  color: var(--brand-purple);
+}
+
+.contact-header p {
+  color: rgba(18, 18, 18, 0.75);
+  font-size: 16px;
+}
+
+/* =========================
+   GRID
+   ========================= */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* =========================
+   LEFT INFO
+   ========================= */
+.contact-info h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: var(--brand-black);
+}
+
+.info-text {
+  color: rgba(18, 18, 18, 0.75);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.info-block strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--brand-purple);
+}
+
+.info-block p {
+  color: rgba(18, 18, 18, 0.75);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================
+   QUICK ACTIONS
+   ========================= */
+.quick-actions {
+  margin-top: 24px;
+  display: flex;
+  gap: 14px;
+}
+
+.quick-actions a {
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  background: var(--brand-purple);
+  color: var(--brand-white);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.quick-actions a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(142, 13, 88, 0.35);
+}
+
+/* =========================
+   RIGHT CARD
+   ========================= */
+.contact-card {
+  background: var(--brand-white);
+  padding: 32px;
+  border-radius: 18px;
+
+  /* PURPLE SHADOW ONLY */
+  box-shadow:
+    0 25px 50px rgba(142, 13, 88, 0.18),
+    0 8px 20px rgba(142, 13, 88, 0.12);
+}
+
+.contact-card h4 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: var(--brand-black);
+}
+
+/* =========================
+   INPUTS & SELECTS
+   ========================= */
+.contact-card input,
+.contact-card select {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(18, 18, 18, 0.15);
+  font-size: 14px;
+  color: var(--brand-black);
+  background: var(--brand-white);
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-card input:focus,
+.contact-card select:focus {
+  outline: none;
+  border-color: var(--brand-purple);
+  box-shadow: 0 0 0 3px rgba(142, 13, 88, 0.2);
+}
+
+/* =========================
+   BUTTON
+   ========================= */
+.contact-card button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: var(--brand-purple);
+  color: var(--brand-white);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(142, 13, 88, 0.4);
+}
+
+/* =========================
+   WHY VMT
+   ========================= */
+.why-vmt {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.why-vmt h3 {
+  margin-bottom: 10px;
+  color: var(--brand-black);
+}
+
+.why-vmt h3 span {
+  color: var(--brand-purple);
+}
+
+.why-vmt p {
+  color: rgba(18, 18, 18, 0.75);
+  max-width: 640px;
+  margin: auto;
+}
+/* ==============================
+   GLOBAL RESPONSIVE FOUNDATION
+============================== */
+
+/* Make layout flexible */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Images auto scale */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive typography */
+h1 {
+  font-size: clamp(28px, 5vw, 48px);
+}
+
+h2 {
+  font-size: clamp(22px, 4vw, 36px);
+}
+
+h3 {
+  font-size: clamp(18px, 3.5vw, 24px);
+}
+
+p {
+  font-size: clamp(14px, 2.5vw, 16px);
+}
+
+/* Container spacing */
+section {
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
+
+/* Prevent content overflow */
+.container,
+.clients-work,
+.logo-slider,
+.banner,
+.hero {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+/* ==============================
+   MOBILE OPTIMIZATION
+============================== */
+
+@media (max-width: 768px) {
+
+  section {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .clients-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .logo-track {
+    gap: 20px !important;
+  }
+
+  .client-card {
+    padding: 24px 18px !important;
+  }
+
+  .client-logo {
+    height: 18px !important;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+

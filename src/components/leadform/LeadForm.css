@@ -1,0 +1,156 @@
+/* =========================
+   FORM CARD
+   ========================= */
+.form-card {
+  width: 100%;
+  max-width: 460px;
+  padding: 36px;
+  border-radius: 22px;
+
+  background: #ffffff;
+
+  /* brand purple shadow */
+  box-shadow:
+    0 30px 70px rgba(142, 13, 88, 0.22),
+    0 10px 28px rgba(142, 13, 88, 0.14);
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* =========================
+   TEXT
+   ========================= */
+.form-card h3 {
+  font-size: 22px;
+  color: #121212;
+}
+
+.form-card p {
+  font-size: 14px;
+  color: rgba(18, 18, 18, 0.75);
+}
+
+/* =========================
+   INPUT & SELECT
+   ========================= */
+.form-card input,
+.form-card select {
+  height: 46px;
+  border-radius: 10px;
+
+  border: 1px solid rgba(18, 18, 18, 0.2);
+  background: #ffffff;
+  color: #121212;
+
+  padding: 0 14px;
+  font-size: 14px;
+
+  transition: border 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* PLACEHOLDER */
+.form-card input::placeholder {
+  color: rgba(18, 18, 18, 0.45);
+}
+
+/* FOCUS */
+.form-card input:focus,
+.form-card select:focus {
+  outline: none;
+  border-color: #8e0d58;
+  box-shadow: 0 0 0 3px rgba(142, 13, 88, 0.2);
+}
+
+/* =========================
+   SELECT STYLING
+   ========================= */
+.form-card select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238e0d58'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 18px;
+  padding-right: 42px;
+}
+
+/* DROPDOWN OPTIONS */
+.form-card select option {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+/* SELECTED OPTION */
+.form-card select option:checked {
+  background-color: rgba(142, 13, 88, 0.12);
+  color: #121212;
+}
+
+/* =========================
+   ERROR TEXT
+   ========================= */
+.form-card span {
+  font-size: 12px;
+  color: #8e0d58;
+}
+
+/* =========================
+   BUTTON
+   ========================= */
+.form-card button {
+  margin-top: 12px;
+  height: 48px;
+  border-radius: 999px;
+  border: none;
+
+  background: #8e0d58;
+  color: #ffffff;
+
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.form-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(142, 13, 88, 0.45);
+}
+
+/* =========================
+   FOOTNOTE
+   ========================= */
+.form-card small {
+  text-align: center;
+  color: rgba(18, 18, 18, 0.6);
+  font-size: 12px;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 768px) {
+  .form-card {
+    padding: 28px 22px;
+  }
+
+  .form-card h3 {
+    font-size: 20px;
+  }
+
+  .form-card input,
+  .form-card select {
+    height: 48px;
+  }
+
+  .form-card button {
+    height: 50px;
+  }
+}

@@ -1,0 +1,202 @@
+/* =========================
+   HERO WRAPPER
+   ========================= */
+.hero-wrapper {
+  background: #ffffff;
+  padding: 0 0 90px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* 🔒 prevents mobile cut */
+}
+
+/* =========================
+   TOP BAR
+   ========================= */
+.hero-top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 72px;
+}
+
+.hero-logo {
+  height: 40px;
+  max-width: 100%;
+}
+
+/* =========================
+   GRID
+   ========================= */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 72px;
+  padding: 50px 72px;
+  align-items: start;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* =========================
+   LEFT CONTENT
+   ========================= */
+.hero-left h1 {
+  font-size: 48px;
+  line-height: 1.15;
+  font-weight: 600;
+  color: #121212;
+  word-wrap: break-word;
+}
+
+.hero-left h1 span {
+  color: #8e0d58;
+}
+
+.hero-sub {
+  margin-top: 22px;
+  font-size: 17px;
+  color: rgba(18, 18, 18, 0.75);
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+.recognized {
+  margin-top: 42px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: rgba(18, 18, 18, 0.55);
+}
+
+/* =========================
+   TRUST LOGOS
+   ========================= */
+.trust-logos {
+  display: flex;
+  gap: 28px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 100%;
+}
+
+.trust-logos img {
+  height: 38px;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  max-width: 100%;
+}
+
+.trust-logos img:hover {
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+.trust-logos img:first-child {
+  height: 50px;
+}
+
+/* =========================
+   FORM CARD
+   ========================= */
+.hero-form {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 36px;
+  width: 100%;
+  max-width: 100%;
+
+  box-shadow:
+    0 35px 80px rgba(142, 13, 88, 0.18),
+    0 15px 35px rgba(142, 13, 88, 0.12);
+
+  transition: transform 0.3s ease;
+}
+
+.hero-form:hover {
+  transform: translateY(-4px);
+}
+
+/* =========================
+   FORM GRID
+   ========================= */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field input,
+.form-field select {
+  padding: 10px 8px;
+  border: none;
+  border-bottom: 1px solid rgba(18, 18, 18, 0.25);
+  font-size: 14px;
+  background: transparent;
+  color: #121212;
+  width: 100%;
+}
+
+/* =========================
+   BUTTON
+   ========================= */
+.hero-form-btn {
+  margin-top: 32px;
+  width: 100%;
+  padding: 15px;
+  background: #8e0d58;
+  color: #ffffff;
+  border: none;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* =========================
+   RESPONSIVE (MOBILE ONLY)
+   ========================= */
+@media (max-width: 900px) {
+
+  .hero-top {
+    padding: 20px 20px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    padding: 32px 20px;
+    gap: 40px;
+  }
+
+  .hero-left h1 {
+    font-size: 32px;
+    line-height: 1.25;
+  }
+
+  .hero-sub {
+    font-size: 15px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr; /* 🔥 stack form fields */
+  }
+
+  .hero-form {
+    padding: 24px;
+  }
+
+  .trust-logos img {
+    height: 30px;
+  }
+
+  .trust-logos img:first-child {
+    height: 38px;
+  }
+}

@@ -1,0 +1,111 @@
+/* =========================
+   PAGE LOADER
+   ========================= */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  background: #ffffff; /* white background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* =========================
+   CONTENT
+   ========================= */
+.loader-content {
+  text-align: center;
+  color: #121212;
+}
+
+/* =========================
+   ICON
+   ========================= */
+.loader-icon {
+  width: 96px;
+  height: 96px;
+  margin: auto;
+  border-radius: 50%;
+
+  /* BRAND PURPLE GLOW */
+  background: radial-gradient(
+    circle at top,
+    rgba(142, 13, 88, 0.95),
+    rgba(142, 13, 88, 0.75)
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 0 40px rgba(142, 13, 88, 0.35),
+    0 0 120px rgba(142, 13, 88, 0.25);
+
+  animation: pulseGlow 2.6s ease-in-out infinite;
+}
+
+.loader-icon img {
+  width: 46px;
+  filter: brightness(1.05);
+}
+
+/* =========================
+   TEXT
+   ========================= */
+.loader-content h1 {
+  margin-top: 24px;
+  font-size: 28px;
+  color: #121212;
+}
+
+.loader-content p {
+  color: rgba(18, 18, 18, 0.7);
+  margin-top: 6px;
+}
+
+/* =========================
+   PROGRESS BAR
+   ========================= */
+.loader-bar {
+  width: 260px;
+  height: 6px;
+  background: rgba(18, 18, 18, 0.12);
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 26px auto 10px;
+}
+
+.loader-progress {
+  height: 100%;
+  background: #8e0d58; /* brand purple */
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+/* =========================
+   PERCENT
+   ========================= */
+.loader-percent {
+  font-size: 14px;
+  color: rgba(18, 18, 18, 0.7);
+}
+
+/* =========================
+   ANIMATIONS
+   ========================= */
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 40px rgba(142, 13, 88, 0.35),
+      0 0 120px rgba(142, 13, 88, 0.25);
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow:
+      0 0 60px rgba(142, 13, 88, 0.5),
+      0 0 160px rgba(142, 13, 88, 0.35);
+  }
+}
